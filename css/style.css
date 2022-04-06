@@ -1,0 +1,413 @@
+@import url("null.css");
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 686px;
+  min-width: 1920px;
+}
+.background__sky {
+  width: 3000px;
+  height: 1600px;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 22, 97, 1) 0%,
+    rgba(74, 224, 255, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: sky 7s linear 0s infinite alternate;
+}
+
+@keyframes sky {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, -1000px);
+  }
+}
+.background__img {
+  transform: scale(1.2) translate(130px, 70px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.police-car {
+  position: relative;
+  z-index: 4;
+  transform: translate(-590px, 40px);
+  animation: car 10s linear infinite;
+}
+
+@keyframes car {
+  0% {
+    transform: translate(-590px, 40px);
+  }
+
+  100% {
+    transform: translate(1500px, 40px);
+  }
+}
+
+.police-car__container {
+  /* max-width: 1100px;
+  max-height: 400px; */
+  margin: 450px auto;
+  position: relative;
+}
+
+.police-car__full {
+  width: 900px;
+  height: 250px;
+  position: relative;
+  transform: scale(0.3);
+  animation: car_vibrate 0.2s linear infinite alternate;
+}
+
+@keyframes car_vibrate {
+  0% {
+    transform: scale(0.3) translate(0px, 0px);
+  }
+
+  100% {
+    transform: scale(0.3) translate(0px, 4px);
+  }
+}
+
+.police-car__bottom-body {
+  width: 900px;
+  height: 160px;
+  background-color: #4a4a4c;
+  border-radius: 7% 18% 7% 7% / 38% 63% 36% 39%;
+  overflow: hidden;
+}
+.bottom-body {
+  position: relative;
+}
+.bottom-body__front {
+  width: 215px;
+  height: 135px;
+  background-color: #424345;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.bottom-body__front-light {
+  width: 75px;
+  height: 37px;
+  background-color: #bce7f4;
+  border-radius: 8px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+.bottom-body__middle-light {
+  width: 20px;
+  height: 35px;
+  background-color: #e79b21;
+  border-radius: 100% 0% 0% 100% / 50% 0% 0% 50%;
+  position: absolute;
+  top: 41px;
+  right: 85px;
+}
+.bottom-body__back-light {
+  width: 70px;
+  height: 47px;
+  background-color: #d22328;
+  border-radius: 50px;
+  transform: skew(-10deg);
+  position: absolute;
+  top: 40px;
+  left: -30px;
+}
+.bottom-body__middle {
+  width: 585px;
+  height: 135px;
+  background-color: #e6e6e6;
+  position: absolute;
+  transform: translate(100px, 0);
+}
+.bottom-body__first-handle {
+  width: 43px;
+  height: 12px;
+  background-color: #424242;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  border-radius: 50px;
+}
+.bottom-body__second-handle {
+  width: 43px;
+  height: 12px;
+  background-color: #424242;
+  position: absolute;
+  top: 20px;
+  right: 200px;
+  border-radius: 50px;
+}
+.bottom-body-text {
+  text-align: center;
+  margin: 60px 50px 0 0;
+  color: #424345;
+  font-size: 36px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.bottom-body-text::after {
+  content: "";
+  background: url("../img/star.png") 0 0 / 80% no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 56px;
+  right: 185px;
+}
+
+.bottom-body__back {
+  height: 135px;
+  width: 100px;
+  background-color: #424345;
+  position: absolute;
+}
+
+.bottom-body__front_wing {
+  width: 165px;
+  height: 165px;
+  background-color: #4a4a4c;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  left: 85px;
+}
+.bottom-body__back-wing {
+  width: 165px;
+  height: 165px;
+  background-color: #4a4a4c;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  right: 155px;
+}
+
+.police-car__top-body {
+  width: 585px;
+  height: 160px;
+  position: relative;
+  top: -299px;
+  left: 100px;
+}
+.top-body__right-top {
+  background-color: #e6e6e6;
+  width: 292.5px;
+  height: 140px;
+  transform: skew(30deg);
+  border-radius: 17% 17% 0% 0% / 51% 51% 0% 0%;
+  position: absolute;
+  right: 41px;
+  top: 0px;
+}
+.top-body__left-top {
+  background-color: #e6e6e6;
+  width: 292.5px;
+  height: 140px;
+  transform: skew(-30deg);
+  border-radius: 17% 17% 0% 0% / 51% 51% 0% 0%;
+  position: absolute;
+  left: 41px;
+  top: 0px;
+}
+.top-body {
+}
+.top-body__window-front {
+  width: 235px;
+  height: 120px;
+  background-color: #4f607e;
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  border-radius: 40% 12% 11% 9% / 82% 29% 26% 19%;
+  overflow: hidden;
+}
+
+.top-body__window-back {
+  width: 235px;
+  height: 120px;
+  background-color: #4f607e;
+  position: absolute;
+  bottom: 20px;
+  border-radius: 40% 12% 11% 9% / 82% 29% 26% 19%;
+  transform: rotateY(180deg);
+  right: 50px;
+  overflow: hidden;
+}
+.top-body__highlight-window-first {
+  width: 55px;
+  height: 140px;
+  background-color: #677790;
+  transform: skew(-30deg);
+  position: absolute;
+  right: 70px;
+}
+.top-body__highlight-window-second {
+  width: 30px;
+  height: 140px;
+  background-color: #677790;
+  transform: skew(-30deg);
+  position: absolute;
+  right: 140px;
+}
+.top-body__highlight-window-third {
+  width: 55px;
+  height: 140px;
+  background-color: #677790;
+  transform: skew(30deg);
+  position: absolute;
+  right: 100px;
+}
+.top-body__highlight-window-fourth {
+  width: 25px;
+  height: 140px;
+  background-color: #677790;
+  transform: skew(30deg);
+  position: absolute;
+  right: 60px;
+}
+
+.top-body__signal-light {
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #d2232a;
+  position: absolute;
+  right: 258px;
+  top: -30px;
+  animation: light 0.5s linear infinite;
+}
+
+@keyframes light {
+  0% {
+    background-color: #d2232a;
+  }
+  100% {
+    background-color: #2326d2;
+  }
+}
+
+.police-car__front-wheel {
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  top: 75px;
+  right: 170px;
+}
+
+.police-car__back-wheel {
+  position: absolute;
+  top: 75px;
+  left: 100px;
+  width: 135px;
+  height: 135px;
+}
+
+.wheel {
+  display: inline-block;
+  transform: scale(1.06);
+  animation: wheel 0.5s linear infinite alternate;
+}
+@keyframes wheel {
+  0% {
+    transform: scale(1.06) translate(0px);
+  }
+
+  100% {
+    transform: scale(1.14) translate(0px, 2px);
+  }
+}
+.wheel__center {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #666666;
+}
+.wheel__middle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background: #cccccc;
+  padding: 30px;
+}
+.wheel__back {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  background-color: #333333;
+  padding: 25px;
+}
+
+.sun {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(251, 236, 63, 1) 0%,
+    rgba(252, 164, 70, 1) 100%
+  );
+  border-radius: 50%;
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  z-index: 2;
+  filter: blur(7px);
+  animation: sun 7s ease-in-out 0s infinite alternate;
+}
+
+@keyframes sun {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  100% {
+    transform: translate(0px, 800px);
+  }
+}
+.moon {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(219, 219, 219, 1) 0%,
+    rgba(150, 150, 150, 1) 100%
+  );
+  border-radius: 50%;
+  filter: blur(2px);
+  position: absolute;
+  top: 80px;
+  right: 90px;
+  z-index: 2;
+  transform: translate(0px, 800px);
+  animation: moon 7s ease-in-out 0s infinite alternate;
+}
+
+@keyframes moon {
+  0% {
+    transform: translate(0px, 800px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
